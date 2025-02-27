@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
+import { ChevronDown, Github, Linkedin, Mail, Award, Briefcase, GraduationCap } from "lucide-react";
 import { useEffect } from "react";
 
 const Index = () => {
@@ -25,29 +25,35 @@ const Index = () => {
 
   const projects = [
     {
-      title: "Project One",
-      description: "A minimal design project showcasing modern aesthetics",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80",
+      title: "Medical Store",
+      description: "Streamlined communication between doctors, chemists, and patients using HTML, CSS, Bootstrap, and Django. Improved operational efficiency and reduced paperwork by 200%.",
+      image: "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?auto=format&fit=crop&w=800&q=80",
     },
     {
-      title: "Project Two",
-      description: "Clean and sophisticated web development",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+      title: "Play Store Observation",
+      description: "Analyzed user behavior and app download patterns using Python, Data Analysis, Pandas, Numpy, and Matplotlib. Observed reactions of 10% of users.",
+      image: "https://images.unsplash.com/photo-1618244972963-dbee1a7edc95?auto=format&fit=crop&w=800&q=80",
     },
     {
-      title: "Project Three",
-      description: "Innovation through simplicity",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80",
+      title: "LNM-services",
+      description: "Developed an LNM-shop platform for students with product listing and registration features. Implemented LNM-taxi feature for facilitating student-partner connections.",
+      image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
     },
   ];
 
   const skills = [
-    "Design Systems",
-    "UI/UX Design",
-    "Frontend Development",
-    "Backend Architecture",
-    "Project Management",
-    "Creative Direction",
+    "Spring Boot",
+    "Angular",
+    "Kafka",
+    "AWS",
+    "SQL",
+    "Java",
+    "Python",
+    "C++",
+    "REST API",
+    "Cloud Computing",
+    "CI/CD",
+    "Serverless Computing",
   ];
 
   return (
@@ -60,9 +66,9 @@ const Index = () => {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <h1 className="text-6xl md:text-8xl font-bold mb-6">Portfolio</h1>
+          <h1 className="text-6xl md:text-8xl font-bold mb-6">Rishi Raj Yadav</h1>
           <p className="text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto">
-            Creating minimal and effective design solutions
+            Software Development Engineer
           </p>
         </motion.div>
         <motion.div
@@ -79,10 +85,29 @@ const Index = () => {
       <section className="py-20 bg-gray-50" style={{ opacity: 0 }}>
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-12 text-center">About</h2>
-          <div className="max-w-3xl mx-auto">
-            <p className="text-lg text-gray-600 leading-relaxed">
-              A passionate creator focused on crafting clean, user-friendly experiences. With a keen eye for detail and a dedication to excellence, I bring ideas to life through thoughtful design and precise execution.
-            </p>
+          <div className="max-w-3xl mx-auto space-y-8">
+            <div className="flex items-center gap-4">
+              <GraduationCap className="w-6 h-6 text-gray-700" />
+              <div>
+                <h3 className="text-xl font-semibold">B.Tech in Computer Science and Engineering</h3>
+                <p className="text-gray-600">LNMIIT • Aug '19 - Jun '23 • CGPA: 7/10.0</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4">
+              <Briefcase className="w-6 h-6 text-gray-700" />
+              <div>
+                <h3 className="text-xl font-semibold">Software Development Engineer</h3>
+                <p className="text-gray-600">BNY • Jan '23 - Present • Pune</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4">
+              <Award className="w-6 h-6 text-gray-700" />
+              <div>
+                <h3 className="text-xl font-semibold">Achievements</h3>
+                <p className="text-gray-600">Solved 700+ DSA questions on Leetcode and 600+ on other platforms</p>
+                <p className="text-gray-600">3rd place in BNY hackathon out of 20 teams</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -120,8 +145,8 @@ const Index = () => {
       {/* Skills Section */}
       <section className="py-20 bg-gray-50" style={{ opacity: 0 }}>
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12 text-center">Expertise</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold mb-12 text-center">Skills</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {skills.map((skill, index) => (
               <motion.div
                 key={index}
@@ -159,7 +184,7 @@ const Index = () => {
               <Linkedin className="w-6 h-6" />
             </motion.a>
             <motion.a
-              href="mailto:hello@example.com"
+              href="mailto:yadavrishiraj976@gmail.com"
               whileHover={{ scale: 1.1 }}
               className="p-3 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
             >
